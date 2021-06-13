@@ -3,14 +3,15 @@
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Joe's Bar & Grill Menu-->
         <scene sceneID="q0P-8A-vfw">
             <objects>
-                <tableViewController id="jkL-jp-hBh" sceneMemberID="viewController">
+                <tableViewController id="jkL-jp-hBh" customClass="CategoryTableViewController" customModule="Restuarant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cMX-ZI-B1c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,6 +24,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="411-Y1-JLZ" kind="show" id="Bie-xK-bPf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -30,16 +34,64 @@
                             <outlet property="delegate" destination="jkL-jp-hBh" id="5Ps-g8-jdE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="opV-8H-GjO"/>
+                    <navigationItem key="navigationItem" title="Joe's Bar &amp; Grill Menu" id="opV-8H-GjO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Heb-Cv-JiB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1444.9275362318842" y="35.869565217391305"/>
         </scene>
+        <!--Menu Table View Controller-->
+        <scene sceneID="zxQ-hz-gRR">
+            <objects>
+                <tableViewController id="411-Y1-JLZ" customClass="MenuTableViewController" customModule="Restuarant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="puc-vi-RJ4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NDW-6k-svu">
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NDW-6k-svu" id="dUC-TT-yCB">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Wh6-6O-N1m" kind="show" id="3Gh-Xc-fgo"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="411-Y1-JLZ" id="lhy-Ib-oM1"/>
+                            <outlet property="delegate" destination="411-Y1-JLZ" id="NUP-8v-UM7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="zdL-lA-kKW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fog-XS-Okk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2396" y="36"/>
+        </scene>
+        <!--Menu Item View Controller-->
+        <scene sceneID="KIP-jl-G2a">
+            <objects>
+                <viewController id="Wh6-6O-N1m" customClass="MenuItemViewController" customModule="Restuarant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OMY-5r-49H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="VRQ-9H-sgK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ayo-ec-oPA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8X-Xx-fZ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3375" y="33"/>
+        </scene>
         <!--Root View Controller-->
         <scene sceneID="k5H-5p-gIg">
             <objects>
-                <tableViewController id="gqS-WB-6BB" sceneMemberID="viewController">
+                <tableViewController id="gqS-WB-6BB" customClass="OrderTableViewController" customModule="Restuarant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jwF-B4-ERs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
