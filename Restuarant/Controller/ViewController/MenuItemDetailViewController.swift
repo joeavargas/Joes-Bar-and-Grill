@@ -1,5 +1,5 @@
 //
-//  MenuItemViewController.swift
+//  MenuItemDetailViewController.swift
 //  Restuarant
 //
 //  Created by Joe Vargas on 6/13/21.
@@ -7,7 +7,10 @@
 
 import UIKit
 
-class MenuItemViewController: UIViewController {
+class MenuItemDetailViewController: UIViewController {
+    
+    // MARK: - Properties
+    var menuItem: MenuItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
