@@ -95,14 +95,74 @@
                     <view key="view" contentMode="scaleToFill" id="OMY-5r-49H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$27.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZD8-Z1-a9F">
+                                <rect key="frame" x="341.66666666666669" y="296" width="52.333333333333314" height="23.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bbo-By-aBH">
+                                <rect key="frame" x="20" y="104" width="374" height="184"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEx-yb-aSd">
+                                <rect key="frame" x="20" y="327.33333333333331" width="374" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hoc-Q4-gK6">
+                                <rect key="frame" x="20" y="647" width="374" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sJj-4A-FZm"/>
+                                </constraints>
+                                <state key="normal" title="Add to Order">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToOrderButtonTapped:" destination="Wh6-6O-N1m" eventType="touchUpInside" id="1tU-Bn-q1l"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zev-rn-2bX">
+                                <rect key="frame" x="20" y="296" width="81" height="23.333333333333314"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="VRQ-9H-sgK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VRQ-9H-sgK" firstAttribute="bottom" secondItem="Hoc-Q4-gK6" secondAttribute="bottom" constant="10" id="0JV-2t-3ZZ"/>
+                            <constraint firstItem="VRQ-9H-sgK" firstAttribute="trailing" secondItem="sEx-yb-aSd" secondAttribute="trailing" constant="20" id="142-Hj-CjC"/>
+                            <constraint firstItem="bbo-By-aBH" firstAttribute="height" secondItem="OMY-5r-49H" secondAttribute="height" multiplier="0.25" id="Bpr-Jq-kvp"/>
+                            <constraint firstItem="VRQ-9H-sgK" firstAttribute="trailing" secondItem="Hoc-Q4-gK6" secondAttribute="trailing" constant="20" id="CGe-eR-3I8"/>
+                            <constraint firstItem="VRQ-9H-sgK" firstAttribute="trailing" secondItem="bbo-By-aBH" secondAttribute="trailing" constant="20" id="Dgd-ok-a96"/>
+                            <constraint firstItem="bbo-By-aBH" firstAttribute="leading" secondItem="VRQ-9H-sgK" secondAttribute="leading" constant="20" id="EII-bf-2uu"/>
+                            <constraint firstItem="sEx-yb-aSd" firstAttribute="top" secondItem="zev-rn-2bX" secondAttribute="bottom" constant="8" id="NcN-wY-vpD"/>
+                            <constraint firstItem="zev-rn-2bX" firstAttribute="top" secondItem="bbo-By-aBH" secondAttribute="bottom" constant="8" symbolic="YES" id="WVq-6t-1VS"/>
+                            <constraint firstItem="VRQ-9H-sgK" firstAttribute="trailing" secondItem="ZD8-Z1-a9F" secondAttribute="trailing" constant="20" id="YFh-QI-wXG"/>
+                            <constraint firstItem="zev-rn-2bX" firstAttribute="leading" secondItem="VRQ-9H-sgK" secondAttribute="leading" constant="20" id="ZtQ-Hq-Opa"/>
+                            <constraint firstItem="ZD8-Z1-a9F" firstAttribute="centerY" secondItem="zev-rn-2bX" secondAttribute="centerY" id="abU-xV-T4U"/>
+                            <constraint firstItem="bbo-By-aBH" firstAttribute="top" secondItem="VRQ-9H-sgK" secondAttribute="top" constant="8" id="cPU-0x-StM"/>
+                            <constraint firstItem="ZD8-Z1-a9F" firstAttribute="top" secondItem="bbo-By-aBH" secondAttribute="bottom" constant="8" symbolic="YES" id="cUU-sy-o1R"/>
+                            <constraint firstItem="sEx-yb-aSd" firstAttribute="leading" secondItem="VRQ-9H-sgK" secondAttribute="leading" constant="20" id="kud-G2-qE6"/>
+                            <constraint firstItem="Hoc-Q4-gK6" firstAttribute="leading" secondItem="VRQ-9H-sgK" secondAttribute="leading" constant="20" id="uRH-If-5gU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ayo-ec-oPA"/>
+                    <connections>
+                        <outlet property="addToOrderButton" destination="Hoc-Q4-gK6" id="Awd-m1-ts8"/>
+                        <outlet property="detailTextLabel" destination="sEx-yb-aSd" id="IbI-uF-MO4"/>
+                        <outlet property="imageView" destination="bbo-By-aBH" id="3Hf-Za-tzT"/>
+                        <outlet property="priceLabel" destination="ZD8-Z1-a9F" id="CGC-pc-B6I"/>
+                        <outlet property="titleLabel" destination="zev-rn-2bX" id="SNQ-2x-3yk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8X-Xx-fZ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3375" y="33"/>
+            <point key="canvasLocation" x="3373.913043478261" y="32.608695652173914"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="k5H-5p-gIg">
