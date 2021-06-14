@@ -9,7 +9,9 @@ import Foundation
 
 class MenuController {
     
-    let baseURL = URL(string: "http://localhost:8090/")!
+    static let shared = MenuController()
+    
+    let baseURL = URL(string: "http://192.168.1.10:8090/")!
     
     
     // MARK: - Request for /categories
