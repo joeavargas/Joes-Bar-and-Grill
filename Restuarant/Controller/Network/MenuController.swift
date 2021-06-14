@@ -9,6 +9,8 @@ import Foundation
 
 class MenuController {
     
+    static let shared = MenuController()
+    
     let baseURL = URL(string: "http://192.168.1.10:8090/")!
     
     

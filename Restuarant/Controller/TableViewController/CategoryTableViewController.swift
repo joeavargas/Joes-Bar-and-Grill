@@ -10,13 +10,12 @@ import UIKit
 class CategoryTableViewController: UITableViewController {
     
     // MARK: - Properties
-    let menuController = MenuController()
     var categories = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        menuController.fetchCategories { categories in
+        MenuController.shared.fetchCategories { categories in
             if let categories = categories{
                 DispatchQueue.main.async {
                     self.updateUI(with: categories)
