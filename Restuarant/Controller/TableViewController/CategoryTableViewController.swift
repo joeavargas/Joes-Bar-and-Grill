@@ -68,5 +68,12 @@ class CategoryTableViewController: UITableViewController {
         }
     }
     
+    // Unwind from OrderConfirmationViewController
+    // Preferably, I would like to unwind to the "main" MenuTableViewController
+    @IBAction func unwindToOrderList(segue: UIStoryboardSegue) {
+        if segue.identifier == "DismissConfirmation" {
+            MenuController.shared.order.menuItems.removeAll()
+        }
+    }
 
 }
