@@ -13,7 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        // MARK: - Setting URLCache size to hold larger amounts of image data
+        // Create a new URLCache so that that the cache has been created before any network requests are made.The cache will store in the apps temp directory, then assign it to the shared cache that the shared URLSession wll use when performing requests
+        let tempDirectory = NSTemporaryDirectory()
+        let urlCache = URLCache(memoryCapacity: 25_000_000, diskCapacity: 50_000_000, diskPath: tempDirectory)
+        URLCache.shared = urlCache
+        
         return true
     }
 
