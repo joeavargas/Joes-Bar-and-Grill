@@ -36,6 +36,21 @@ class MenuTableViewController: UITableViewController {
         let menuItem = menuItems[indexPath.row]
         cell.textLabel?.text = menuItem.name
         cell.detailTextLabel?.text = String(format: "$%.2f", menuItem.price)
+        
+        MenuController.shared.fetchImage(url: menuItem.imageURL) { image in
+            guard let image = image else {return}
+            
+            DispatchQueue.main.async {
+                // Check to see which index path the cell is now located. If it's changed, skip setting the image view
+                if let currentIndexPath = self.tableView.indexPath(for: cell),
+                   currentIndexPath != indexPath {
+                    return
+                }
+                cell.imageView?.image = image
+                // let the cell know that it needs to update its layout since the imageView may have previously had zero size
+                cell.setNeedsLayout()
+            }
+        }
     }
 
     // MARK: - Table view data source
