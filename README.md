@@ -1,4 +1,4 @@
-# Restuarant
+# Joe's Bar and Grill 👨🏻‍🍳
 Parody restaurant food-ordering app created with Swift 5.4 build target iOS 14.5+ 
 
 ## SDK / Libraries
