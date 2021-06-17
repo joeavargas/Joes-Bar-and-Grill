@@ -11,8 +11,8 @@ Download the project to your local machine and open with Xcode or clone using th
 ## 🎥 Demo
 [Joe's Bar and Grill](https://youtu.be/zPzpI6GtLGA)
 
-## Contributing
+## 🤝 Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
+## 📝 License
 [MIT](https://choosealicense.com/licenses/mit/)
